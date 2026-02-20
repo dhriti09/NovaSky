@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background Video Styling - Isko poori screen par fix kiya hai */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Pehle 90% tha, isse poora cover hoga */
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Search hote hi video ko hide karne ki class */
+.hide-video {
+    display: none !important;
+}
+
+body {
+    color: #fff; /* Video aur images par white text zyada acha dikhta hai */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    transition: background-image 0.5s ease-in-out;
+    background-color: #000; /* Backup color */
+}
+
+.hedd {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #fff;
+    text-shadow: 2px 4px 10px rgba(0,0,0,0.5);
+    padding: 20px 0;
+    letter-spacing: 2px;
+}
+
+.app-main {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    /* Glassmorphism Effect - Isko thoda dark kiya hai taaki content bright dikhe */
+    background: rgba(0, 0, 0, 0.25); 
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.app-main:hover {
+    transform: translateY(-5px);
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.input-box {
+    width: 70%;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    outline: none;
+    color: #2c3e50;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    padding: 0 20px;
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+button {
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    height: 55px;
+    width: 55px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+button:hover {
+    transform: scale(1.1);
+    background: #ecf0f1;
+}
+
+.weather-body {
+    display: none; /* JS search par ise block karega */
+    animation: fadeIn 0.8s ease-in-out;
+    margin-top: 20px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.city {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
+
+.date {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+.temp {
+    font-size: 5rem;
+    font-weight: 900;
+    margin: 10px 0;
+    text-shadow: 2px 2px 15px rgba(0,0,0,0.4);
+}
+
+.info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.space {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 15px 5px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background 0.3s;
+}
+
+.space:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+#myChart {
+    margin-top: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.7);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    color: white;
+    padding: 10px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .info {
+        grid-template-columns: 1fr;
+    }
+    .hedd {
+        font-size: 2.5rem;
+    }
+    .temp {
+        font-size: 3.5rem;
+    }
+    .app-main {
+        padding: 20px;
+    }
+}
+#myChart {
+    margin-top: 20px;
+    border-radius: 15px;
+   
+    overflow: visible !important; 
+    background: rgba(0, 0, 0, 0.2);
+}
+
+
+.google-visualization-tooltip {
+    border: none !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    z-index: 9999 !important;
+}
