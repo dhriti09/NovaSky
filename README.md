@@ -1,5 +1,5 @@
 
- 📋 Project Description
+ ## 📋 Project Description
 
 The NovaSky Weather App is a front-end web application that provides users with real-time weather updates for any city worldwide. By integrating the **OpenWeatherMap API**, the app fetches current conditions including temperature, humidity, wind speed, and atmospheric pressure.
 
@@ -7,7 +7,7 @@ What sets this project apart is its **interactive data visualization**: it utili
 
 ---
 
- 🛠️ Key Features
+## 🛠️ Key Features
 
 * **Real-time Data:** Fetches live weather metrics using the `OpenWeatherMap API`.
 * **Dynamic Visuals:** The background video/image changes automatically to match the weather status (e.g., Thunderstorm, Haze, Clear).
@@ -16,7 +16,7 @@ What sets this project apart is its **interactive data visualization**: it utili
 * **Intuitive Search:** Supports both button clicks and "Enter" key triggers for a smooth user experience.
 
 ---
- 🗂️ Tech Stack
+## 🗂️ Tech Stack
 
 **Frontend**  HTML5, CSS3 (Flexbox/Grid, Animations) 
 **Scripting**  JavaScript (ES6+, Async/Await) 
